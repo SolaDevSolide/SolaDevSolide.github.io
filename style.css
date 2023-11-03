@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background-color: #001220;
+}
+section {
+    position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.blue {
+    background: #3c31dd;
+}
+
+.red {
+    background: #dd3f31
+}
+
+.pink {
+    background: #C62368;
+}
+
+.dark {
+    background: #0f0f10;
+}
+
+.green {
+    background-color: #1d5a4d;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.spacer {
+    aspect-ratio: 900/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.layer1 {
+    background-image: url('./green-wave.svg');
+}
+
+img.circular-image {
+    border-radius: 50%;
+    width: 100px; /* Définissez la largeur souhaitée */
+    height: 100px; /* Assurez-vous que la hauteur est égale à la largeur pour un cercle parfait */
+    object-fit: cover; /* Assurez que l'image couvre l'espace sans être déformée */
+  }
+
+.logos {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 0 0.5rem;
+}
+
+.logo {
+    flex: 1; /* Chaque logo va s'étendre et occuper un espace équitable */
+    margin: 5px; /* Espacement entre les logos */
+    max-width: calc(16.66% - 10px); /* Moins la marge des deux côtés */
+}
+
+.logo img {
+    width: 100%; /* Forcez les images à prendre la largeur complète du div.logo */
+    height: auto; /* Gardez le ratio de l'image */
+    display: block; /* Éliminez l'espace blanc sous l'image */
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {   
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.logo:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
+.logos2 {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 0 0.5rem;
+}
+
+.logo2 {
+    flex: 1; /* Chaque logo va s'étendre et occuper un espace équitable */
+    margin: 5px; /* Espacement entre les logos */
+    max-width: calc(33% - 10px); /* Moins la marge des deux côtés */
+}
+
+.logo2 img {
+    width: 100%; /* Forcez les images à prendre la largeur complète du div.logo */
+    height: auto; /* Gardez le ratio de l'image */
+    display: block; /* Éliminez l'espace blanc sous l'image */
+}
+
+.logo2:nth-child(2) {
+    transition-delay: 200ms;
+}
